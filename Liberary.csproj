@@ -548,6 +548,7 @@
     <Compile Include="Assets\Fungus\Thirdparty\Usfxr\Scripts\SfxrSynth.cs" />
     <Compile Include="Assets\Fungus\Thirdparty\iTween\iTween.cs" />
     <Compile Include="Assets\FungusExamples\FungusLua\Bindings\CustomScript.cs" />
+    <Compile Include="Assets\JumpSensor.cs" />
     <Compile Include="Assets\playerController.cs" />
     <Compile Include="Assets\stickController.cs" />
   </ItemGroup>

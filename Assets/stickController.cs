@@ -14,16 +14,5 @@ public class stickController : MonoBehaviour {
 		
 	}
 
-	void OnColliderEnter2D(Collider collider){
-		Debug.Log ("enter");
-	}
 
-
-	void OnTriggerEnter2D(Collider2D collider){
-		Debug.Log (collider.transform.position.y);
-		if (collider.transform.position.y > this.transform.position.y) {
-			Debug.Log ("come from up");
-			//collider.transform.TransformVector;
-		}
-	}
 }

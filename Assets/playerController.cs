@@ -35,15 +35,12 @@ public class playerController : MonoBehaviour {
 		}
 
         Vector2 force = Vector2.zero;
+
         if (Input.GetKey(KeyCode.Space) && JumpSensor.IsCanJump())
-        {
-            force.y = JumpSpeed;
-            //Debug.Log("Jump");
+        {               
+                rigidbody2D.velocity = Vector3.up * JumpSpeed;
         }
-        if (force != Vector2.zero)
-        {
-            rigidbody2D.AddForce(force);
-        }
+        
 
         //add other walking way
         if (Input.GetKey(KeyCode.RightArrow)|| Input.GetKey(KeyCode.LeftArrow))
@@ -52,11 +49,12 @@ public class playerController : MonoBehaviour {
             if (Input.GetKey(KeyCode.RightArrow))
             {
                 force += new Vector2(forceValue, 0);
+                gameObject.transform.rotation = Quaternion.Euler(0f, 0f, 0f);
             }
             if (Input.GetKey(KeyCode.LeftArrow))
             {
                 force += new Vector2(-forceValue, 0);
-                //gameObject.transform.rotation = Quaternion.Euler(0f, 180f, 0f);
+                gameObject.transform.rotation = Quaternion.Euler(0f, 180f, 0f);
             }
             if (force != Vector2.zero)
             {

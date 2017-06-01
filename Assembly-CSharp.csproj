@@ -515,8 +515,11 @@
      <Compile Include="Assets\Fungus\Thirdparty\iTween\iTween.cs" />
      <Compile Include="Assets\FungusExamples\FungusLua\Bindings\CustomScript.cs" />
      <Compile Include="Assets\JumpSensor.cs" />
+     <Compile Include="Assets\hole.cs" />
+     <Compile Include="Assets\lineScript.cs" />
      <Compile Include="Assets\playerController.cs" />
      <Compile Include="Assets\stickController.cs" />
+     <Compile Include="Assets\winOrLose.cs" />
      <None Include="Assets\Fungus\Thirdparty\FungusLua\Thirdparty\JSON\readme.txt" />
      <None Include="Assets\FungusExamples\FungusLua\Localization\stringtable.txt" />
      <None Include="Assets\Fungus\Docs\README.txt" />

@@ -28,8 +28,14 @@ public class winOrLose : MonoBehaviour {
 		//	gb.transform.position = transform.position;
 		
 	//	}
-		
 	}
+
+	void OnTriggerStay2D(Collider2D other)
+	{
+		//Debug.Log ("123");
+	}
+		
+	
 	
 
 

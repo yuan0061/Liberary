@@ -11,19 +11,14 @@ public class CameraController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		Debug.Log ("hello");
-		Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-		if (Input.GetMouseButton(0))
-		{
-			RaycastHit2D hit = Physics2D.Raycast(ray.origin, ray.direction, 10, 0);
-			Debug.Log (hit.collider);
-			if (hit.collider)
-			{
-				Debug.Log ("hit.transform.name");
-			}
-		}
-    }
-
+		//Debug.Log ("hello");
+		//RaycastHit2D hit = Physics2D.Raycast (Camera.main.ScreenToWorldPoint (Input.mousePosition), Vector2.zero);
+		//if (Input.GetMouseButtonDown (0)) {
+		//	if (hit.collider != null) {
+		//		Debug.Log ("Target Position: " + hit.collider.gameObject.transform.position);
+		//	}
+		//}
+	}
 
 
 

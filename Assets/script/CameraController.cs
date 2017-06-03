@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class CameraController : MonoBehaviour {
-    public Transform projectile;
+    
     // Use this for initialization
     void Start () {
 		
@@ -11,9 +11,20 @@ public class CameraController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        Vector3 newPosition = transform.position;
-        newPosition.x = projectile.position.x;
-        newPosition.y = projectile.position.y;
-        transform.position = newPosition;
+		Debug.Log ("hello");
+		Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+		if (Input.GetMouseButton(0))
+		{
+			RaycastHit2D hit = Physics2D.Raycast(ray.origin, ray.direction, 10, 0);
+			Debug.Log (hit.collider);
+			if (hit.collider)
+			{
+				Debug.Log ("hit.transform.name");
+			}
+		}
     }
+
+
+
+
 }

@@ -513,6 +513,7 @@
      <Compile Include="Assets\Fungus\Thirdparty\Usfxr\Scripts\SfxrSynth.cs" />
      <Compile Include="Assets\Fungus\Thirdparty\iTween\iTween.cs" />
      <Compile Include="Assets\FungusExamples\FungusLua\Bindings\CustomScript.cs" />
+     <Compile Include="Assets\isClicked.cs" />
      <Compile Include="Assets\script\CameraController.cs" />
      <Compile Include="Assets\script\JumpSensor.cs" />
      <Compile Include="Assets\script\hole.cs" />

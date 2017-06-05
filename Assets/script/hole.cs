@@ -3,11 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class hole : MonoBehaviour {
-	
-	Vector3 point;
-	float x;
-	float y;
-	float z;
+	public bool isTri=false;
+	bool alreadyHave=false;
+	public bool up=false;
 	// Use this for initialization
 	void Start () {
 		
@@ -21,21 +19,27 @@ public class hole : MonoBehaviour {
 	}
 	void OnMouseDrag()
 	{
-		GameObject hint = GameObject.FindWithTag("one");
-		float x = transform.position.x;
-		float y = transform.position.y;
-		float numberX = hint.transform.position.x;
-		float numberY = hint.transform.position.y;
+		//GameObject hint = GameObject.FindWithTag("one");
+		float x = Input.mousePosition.x;
+		float y = Input.mousePosition.y;
+		//float numberX = hint.transform.position.x;
+		//float numberY = hint.transform.position.y;
 
-		if (x > numberX - 0.5 & x < numberX + 0.5 & y > numberY - 0.5 & y < numberY + 0.5) {
-				
-			transform.position = hint.transform.position;
+
+			Vector3 point = Camera.main.ScreenToWorldPoint (new Vector3 (x, y, 1f));
+		if (isTri == false) {
+			Debug.Log ("沒有成功");
+			transform.position = point;
+		
 		}
-		else{
-			point = Camera.main.ScreenToWorldPoint (new Vector3 (x, y, 1f));
-			gameObject.transform.position = point;
+		   
 		}
 
-
+	void OnMouseUp(){
+		isTri=false;
+		up = true;
 	}
+
+
+
 }

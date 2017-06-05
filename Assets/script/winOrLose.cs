@@ -19,8 +19,8 @@ public class winOrLose : MonoBehaviour {
 
 
 	void OnTriggerStay2D(Collider2D other){
-		Debug.Log("撞到了");
-		string name = name;
+		//Debug.Log("撞到了");
+		//string name = name;
 
 		already=true;
 		float wordX = other.transform.position.x;

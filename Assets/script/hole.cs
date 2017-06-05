@@ -28,7 +28,7 @@ public class hole : MonoBehaviour {
 
 			Vector3 point = Camera.main.ScreenToWorldPoint (new Vector3 (x, y, 1f));
 		if (isTri == false) {
-			Debug.Log ("沒有成功");
+			//Debug.Log ("沒有成功");
 			transform.position = point;
 		
 		}

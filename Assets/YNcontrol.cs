@@ -31,6 +31,7 @@ public class YNcontrol : MonoBehaviour {
 		bool bool11 = GameObject.Find ("11").GetComponent<winOrLose> ().bool11;
 		if (bool1 && bool2 && bool3 && bool4 && bool5 && bool6 && bool7 && bool8 && bool9 && bool10 && bool11) {
 			flowchart.SetBooleanVariable ("success", true);
+
 		
 		} else {
 			flowchart.SetBooleanVariable ("success", false);

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class winOrLose : MonoBehaviour {
 	//GameObject[] gb = new GameObject[11];
 
@@ -16,7 +17,8 @@ public class winOrLose : MonoBehaviour {
 	public bool bool9 = false;
 	public bool bool10 = false;
 	public bool bool11 = false;
-    bool isTri = false;
+	int isColli = 0;
+
 
 	// Use this for initialization
 	void Start () {
@@ -26,8 +28,10 @@ public class winOrLose : MonoBehaviour {
 	// Update is called once per frame
 
     void Update () {
-		
+
 	}
+
+
 
 
 	void OnTriggerStay2D(Collider2D other){
@@ -43,8 +47,9 @@ public class winOrLose : MonoBehaviour {
 		float numberY = transform.position.y;
 		float numberZ = transform.position.z;
 		bool up = other.gameObject.GetComponent<hole> ().up;
-		if (up==true && wordX > numberX - 0.3 && wordX < numberX + 0.3 && wordY > numberY - 0.3 && wordY < numberY + 0.3) {
+		if (isColli==0 && up==true && wordX > numberX - 0.4 && wordX < numberX + 0.4 && wordY > numberY - 0.4 && wordY < numberY + 0.4) {
 			other.gameObject.GetComponent<hole> ().isTri=true;
+			isColli=1;
 		    other.transform.position = new Vector3 (numberX,numberY,numberZ);
 			if (other.name == "追") {
 				bool1 = true;
@@ -94,8 +99,9 @@ public class winOrLose : MonoBehaviour {
 		}
 	}	
 
-
-
+	void OnTriggerExit2D(Collider2D other){
+		isColli = 0;
+	}
 
 
 }

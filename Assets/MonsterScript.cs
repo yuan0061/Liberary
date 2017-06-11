@@ -8,6 +8,8 @@ public class MonsterScript : MonoBehaviour {
 	public GameObject FollowTarget;
 	private Rigidbody2D rigidbody;
 	public CollisionListScript PlayerSensor;
+	public CollisionListScript AttackSensor;
+	public HPupdown hp;
 
 	// Use this for initialization
 	void Start () {
@@ -29,6 +31,9 @@ public class MonsterScript : MonoBehaviour {
 		}else{
 			this.gameObject.transform.Translate (Time.deltaTime * 5f,0,0);
 
+		}
+		if (AttackSensor.CollisionObjects.Count > 0) {
+			hp.HPDrop (0.05f);
 		}
 
 		/*if (PlayerSensor.CollisionObjects.Count != 0) {

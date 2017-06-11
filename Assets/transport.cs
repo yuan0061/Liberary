@@ -65,7 +65,10 @@ public class transport : MonoBehaviour {
 
 	void OnTriggerStay2D(Collider2D other){
 		//Debug.Log ("123");
-		isClicked = true;
+		if(other.tag == "Player"){
+			isClicked = true;
+		}
+
 
 	}
 	void noActive(){

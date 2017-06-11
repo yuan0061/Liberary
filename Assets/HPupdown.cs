@@ -6,16 +6,16 @@ public class HPupdown : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		InvokeRepeating ("HPDrop", 1f, 3f);
+		//InvokeRepeating ("HPDrop", 1f, 3f);
 	}
 
 	// Update is called once per frame
 	void Update () {
 
 	}
-	void HPDrop(){
+	public void HPDrop(float num){
 
-		this.GetComponent<Image> ().fillAmount -= 0.1f;
+		this.GetComponent<Image> ().fillAmount -= num;
 
 	}
-	}
+}

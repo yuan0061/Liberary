@@ -21,6 +21,7 @@ public class playerController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		
 		if (Input.GetKey (KeyCode.W)) { 
 			this.transform.position += new Vector3 (0, speed * Time.deltaTime, 0); 
 		}

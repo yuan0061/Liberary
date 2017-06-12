@@ -13,7 +13,16 @@ public class hole : MonoBehaviour {
 	bool started = true;
 	// Use this for initialization
 	void Start () {
-		
+		initial ();
+	}
+	void initial(){
+		isTri=false;
+		DragCount=0;
+		firstDrag=false;
+		alreadyHave=false;
+		up=false;
+		timer=90;
+		started = true;
 	}
 	
 	// Update is called once per frame

@@ -3,9 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using Fungus;
 
+
 public class YNcontrol : MonoBehaviour {
 
 	public Flowchart flowchart;
+	public bookCount book;
 
 	// Use this for initialization
 	void Start () {
@@ -14,7 +16,10 @@ public class YNcontrol : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-
+		if (flowchart.GetBooleanVariable ("success") == true) {
+			book.AddBook (10);
+			flowchart.SetBooleanVariable ("success", false);
+		}
 	}
 
 	void fungusJudge(){

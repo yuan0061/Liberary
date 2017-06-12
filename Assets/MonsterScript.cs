@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using Fungus;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -10,9 +11,9 @@ public class MonsterScript : MonoBehaviour {
 	public CollisionListScript PlayerSensor;
 	public CollisionListScript AttackSensor;
 	public HPupdown hp;
-
-	// Use this for initialization
-	void Start () {
+    public Flowchart flowchart;
+    // Use this for initialization
+    void Start () {
 		rigidbody = this.GetComponent<Rigidbody2D> ();
 	}
 	
@@ -34,7 +35,8 @@ public class MonsterScript : MonoBehaviour {
 		}
 		if (AttackSensor.CollisionObjects.Count > 0) {
 			hp.HPDrop (0.05f);
-		}
+            flowchart.ExecuteBlock("beAttacked");
+        }
 
 		/*if (PlayerSensor.CollisionObjects.Count != 0) {
 			Vector3 lookAt = FollowTarget.gameObject.transform.position;

@@ -1,4 +1,8 @@
 sceneSetups:
+<<<<<<< HEAD
 - path: Assets/_Scene/printer.unity
+=======
+- path: "Assets/_Scene/\u4F3D\u5229\u7565\u5BB6.unity"
+>>>>>>> 70f0263573339926e23419b483b2ce6286f26dab
   isLoaded: 1
   isActive: 1

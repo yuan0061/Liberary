@@ -44,13 +44,24 @@ public class hole : MonoBehaviour {
 			//firstDrag == false;
 			flowchart.SetBooleanVariable ("lose", true);
 		}
+
 		
 	}
 
 	IEnumerator countDown(){
-		timer--;
-		yield return new WaitForSeconds (1);
-		started = true;
+		if (timer > 0) {
+			timer--;
+			yield return new WaitForSeconds (1);
+			started = true;
+		} else {
+			//started == false;
+			//firstDrag == false;
+
+			flowchart.SendFungusMessage ("lose");
+
+		}
+			
+
 	}
 
 	void OnMouseDrag()

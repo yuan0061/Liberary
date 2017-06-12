@@ -7,9 +7,10 @@ public class bookCount : MonoBehaviour {
 
 	private Text _text;
 	public static int bookcount = 0;
+    public static int sceneNumber = 0;
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start () {
 		_text = this.GetComponent<Text> ();
 		_text.text = "X" + bookcount;
 	}
@@ -23,4 +24,11 @@ public class bookCount : MonoBehaviour {
 		bookcount += count;
 		_text.text = "X" + bookcount;
 	}
+
+    public void SetSceneNumber(int number) {
+        sceneNumber = number;
+    }
+    public int GetScenceNumber() {
+        return sceneNumber;
+    }
 }

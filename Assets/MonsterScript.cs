@@ -34,7 +34,7 @@ public class MonsterScript : MonoBehaviour {
 
 		}
 		if (AttackSensor.CollisionObjects.Count > 0) {
-			hp.HPDrop (0.05f);
+			hp.HPDrop (0.005f);
             flowchart.ExecuteBlock("beAttacked");
         }
 

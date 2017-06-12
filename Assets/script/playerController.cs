@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class playerController : MonoBehaviour {
-
+    public Sprite faceR;
+    public Sprite faceL;
+    SpriteRenderer playerSpriteRenderer;
     // Use this for initialization
     void Start () {
-
+        playerSpriteRenderer = (SpriteRenderer)GetComponent("SpriteRenderer");
     }
 
 	float speed = 10;
@@ -21,11 +23,14 @@ public class playerController : MonoBehaviour {
 			this.transform.position += new Vector3 (0, -speed * Time.deltaTime, 0); 
 		}
 		if (Input.GetKey (KeyCode.A)|| Input.GetKey(KeyCode.LeftArrow)) { 
-			this.transform.position += new Vector3 (-speed * Time.deltaTime, 0, 0); 
-		}
+			this.transform.position += new Vector3 (-speed * Time.deltaTime, 0, 0);
+            playerSpriteRenderer.sprite = faceL;
+        }
 		if (Input.GetKey (KeyCode.D)|| Input.GetKey(KeyCode.RightArrow)) { 
 			this.transform.position += new Vector3 (speed * Time.deltaTime, 0, 0);
-		}
+            playerSpriteRenderer.sprite = faceR;
+
+        }
 
        
 

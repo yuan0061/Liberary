@@ -2,26 +2,33 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using Fungus;
+
 public class hole : MonoBehaviour {
-	public bool isTri=false;
-	public static int DragCount=0;
-	bool firstDrag=false;
-	bool alreadyHave=false;
-	public bool up=false;
+
+	public bool isTri = false;
+	public static int DragCount = 0;
+	public bool up = false;
 	public Text timerStr;
-	int timer=90;
+	public Flowchart flowchart;
+
+	bool firstDrag = false;
+	bool alreadyHave = false;
+	int timer = 90;
 	bool started = true;
+
 	// Use this for initialization
 	void Start () {
 		initial ();
 	}
+
 	void initial(){
-		isTri=false;
-		DragCount=0;
-		firstDrag=false;
-		alreadyHave=false;
-		up=false;
-		timer=90;
+		isTri = false;
+		DragCount = 0;
+		firstDrag = false;
+		alreadyHave = false;
+		up = false;
+		timer = 90;
 		started = true;
 	}
 	
@@ -32,7 +39,11 @@ public class hole : MonoBehaviour {
 			timerStr.text = timer.ToString()+"秒";
 			started = false;
 		}
-
+		if (timer == 0) {
+			//started == false;
+			//firstDrag == false;
+			flowchart.SetBooleanVariable ("lose", true);
+		}
 		
 	}
 
@@ -41,6 +52,7 @@ public class hole : MonoBehaviour {
 		yield return new WaitForSeconds (1);
 		started = true;
 	}
+
 	void OnMouseDrag()
 	{
 		DragCount ++;

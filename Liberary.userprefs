@@ -1,10 +1,17 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/YNcontrol.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/script/hole.cs">
     <Files>
-      <File FileName="Assets/script/hole.cs" Line="26" Column="45" />
-      <File FileName="Assets/script/winOrLose.cs" Line="35" Column="5" />
-      <File FileName="Assets/YNcontrol.cs" Line="15" Column="36" />
+      <File FileName="Assets/MonsterScript.cs" Line="28" Column="1" />
+      <File FileName="Assets/script/playerController.cs" Line="24" Column="3" />
+      <File FileName="Assets/HPupdown.cs" Line="5" Column="22" />
+      <File FileName="Assets/transport.cs" Line="1" Column="1" />
+      <File FileName="Assets/script/winOrLose.cs" Line="105" Column="1" />
+      <File FileName="Assets/script/stickController.cs" Line="5" Column="47" />
+      <File FileName="Assets/isClicked.cs" Line="18" Column="19" />
+      <File FileName="Assets/bookCount.cs" Line="15" Column="3" />
+      <File FileName="Assets/YNcontrol.cs" Line="21" Column="4" />
+      <File FileName="Assets/script/hole.cs" Line="45" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

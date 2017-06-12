@@ -8,11 +8,11 @@ public class comManager : MonoBehaviour {
 
 	public Flowchart flowchart;
 	private Text _text;
-	private int _currentScore;
+	public static int _currentScore = 0;
 
 	// Use this for initialization
 	void Start () {
-		_currentScore = flowchart.GetIntegerVariable ("傳播率");
+		//_currentScore = flowchart.GetIntegerVariable ("傳播率");
 		_text = this.GetComponent<Text> (); 
 		_text.text =  _currentScore + "%";
 	}

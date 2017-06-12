@@ -8,7 +8,7 @@ public class comManager : MonoBehaviour {
 
 	public Flowchart flowchart;
 	private Text _text;
-	public static int _currentScore;
+	public static int _currentScore = 0;
 
 	// Use this for initialization
 	void Start () {

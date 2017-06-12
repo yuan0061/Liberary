@@ -517,6 +517,7 @@
      <Compile Include="Assets\HPupdown.cs" />
      <Compile Include="Assets\MonsterScript.cs" />
      <Compile Include="Assets\YNcontrol.cs" />
+     <Compile Include="Assets\bookCount.cs" />
      <Compile Include="Assets\comManager.cs" />
      <Compile Include="Assets\isClicked.cs" />
      <Compile Include="Assets\script\CameraController.cs" />

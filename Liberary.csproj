@@ -556,11 +556,14 @@
     <Compile Include="Assets\Fungus\Thirdparty\iTween\iTween.cs" />
     <Compile Include="Assets\FungusExamples\FungusLua\Bindings\CustomScript.cs" />
     <Compile Include="Assets\HPupdown.cs" />
+    <Compile Include="Assets\HomeControl.cs" />
+    <Compile Include="Assets\LibraryControl.cs" />
     <Compile Include="Assets\MonsterScript.cs" />
     <Compile Include="Assets\YNcontrol.cs" />
     <Compile Include="Assets\bookCount.cs" />
     <Compile Include="Assets\comManager.cs" />
     <Compile Include="Assets\isClicked.cs" />
+    <Compile Include="Assets\movieAct.cs" />
     <Compile Include="Assets\script\CameraController.cs" />
     <Compile Include="Assets\script\JumpSensor.cs" />
     <Compile Include="Assets\script\hole.cs" />

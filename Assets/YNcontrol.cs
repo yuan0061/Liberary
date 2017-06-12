@@ -12,6 +12,7 @@ public class YNcontrol : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		flowchart.SetBooleanVariable ("success", false);
+        book.SetSceneNumber(1);
 	}
 	
 	// Update is called once per frame

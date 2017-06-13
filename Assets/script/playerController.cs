@@ -9,6 +9,7 @@ public class playerController : MonoBehaviour {
     public Sprite faceL;
     SpriteRenderer playerSpriteRenderer;
     public bookCount book;
+	public
     // Use this for initialization
     void Start () {
         playerSpriteRenderer = (SpriteRenderer)GetComponent("SpriteRenderer");
@@ -22,8 +23,13 @@ public class playerController : MonoBehaviour {
         else if (i == 2)
         {   
             //library
+<<<<<<< HEAD
             this.transform.position = new Vector3(125, 0, 0);
 			chart.SendFungusMessage("endTalk");
+=======
+            this.transform.position = new Vector3(117, 0, 0);
+
+>>>>>>> 9333972b4543473d8f40810c78a3a74d9339afbf
         }
         else if (i == 3) {
             //home

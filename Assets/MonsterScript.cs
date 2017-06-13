@@ -11,6 +11,7 @@ public class MonsterScript : MonoBehaviour {
 	public CollisionListScript PlayerSensor;
 	public CollisionListScript AttackSensor;
 	public HPupdown hp;
+	public bookCount book;
     public Flowchart flowchart;
     // Use this for initialization
     void Start () {
@@ -35,7 +36,9 @@ public class MonsterScript : MonoBehaviour {
 		}
 		if (AttackSensor.CollisionObjects.Count > 0) {
 			hp.HPDrop (0.005f);
+			book.AddBook (-1);
             flowchart.ExecuteBlock("beAttacked");
+
         }
 
 		/*if (PlayerSensor.CollisionObjects.Count != 0) {

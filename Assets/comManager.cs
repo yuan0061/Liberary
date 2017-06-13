@@ -27,6 +27,9 @@ public class comManager : MonoBehaviour {
 		_currentScore += score; 
 		_text.text =  _currentScore + "%";  
 		flowchart.SetIntegerVariable ("傳播率", _currentScore);
+		if (_currentScore >= 80) {
+			flowchart.SendFungusMessage ("complete");
+		}
 	} 
 		
 }

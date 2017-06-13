@@ -5,7 +5,7 @@ using UnityEngine.UI;
 using Fungus;
 
 public class hole : MonoBehaviour {
-
+	public bool dragged=false;
 	public bool isTri = false;
 	public static int DragCount = 0;
 	public bool up = false;
@@ -73,6 +73,7 @@ public class hole : MonoBehaviour {
 		//GameObject hint = GameObject.FindWithTag("one");
 		float x = Input.mousePosition.x;
 		float y = Input.mousePosition.y;
+		dragged = true;
 		//float numberX = hint.transform.position.x;
 		//float numberY = hint.transform.position.y;
 

@@ -17,8 +17,8 @@ public class winOrLose : MonoBehaviour {
 	public bool bool9 = false;
 	public bool bool10 = false;
 	public bool bool11 = false;
-	int isColli = 0;
-
+	public int isColli = 0;
+	string tagName;
 
 	// Use this for initialization
 	void Start () {
@@ -48,6 +48,8 @@ public class winOrLose : MonoBehaviour {
 		float numberZ = transform.position.z;
 		bool up = other.gameObject.GetComponent<hole> ().up;
 		if (isColli==0 && up==true && wordX > numberX - 0.4 && wordX < numberX + 0.4 && wordY > numberY - 0.4 && wordY < numberY + 0.4) {
+			tagName = other.tag;
+			Debug.Log (tagName);
 			other.gameObject.GetComponent<hole> ().isTri=true;
 			isColli=1;
 		    other.transform.position = new Vector3 (numberX,numberY,numberZ);
@@ -100,7 +102,10 @@ public class winOrLose : MonoBehaviour {
 	}	
 
 	void OnTriggerExit2D(Collider2D other){
-		isColli = 0;
+		if (other.tag==tagName) {
+			isColli = 0;
+		}
+
 	}
 
 

@@ -1,9 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Fungus;
 
 public class playerController : MonoBehaviour {
-    public Sprite faceR;
+	public Flowchart chart;
+	public Sprite faceR;
     public Sprite faceL;
     SpriteRenderer playerSpriteRenderer;
     public bookCount book;
@@ -20,7 +22,8 @@ public class playerController : MonoBehaviour {
         else if (i == 2)
         {   
             //library
-            this.transform.position = new Vector3(117, 0, 0);
+            this.transform.position = new Vector3(125, 0, 0);
+			chart.SendFungusMessage("endTalk");
         }
         else if (i == 3) {
             //home

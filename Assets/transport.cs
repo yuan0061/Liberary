@@ -15,6 +15,7 @@ public class transport : MonoBehaviour {
 	public GameObject b2;
 	public GameObject b3;
 	public comManager commanager;
+	public bookCount book;
 	private float ran;
 	private float ran2;
 
@@ -28,6 +29,7 @@ public class transport : MonoBehaviour {
 	void Update () {
 		
 		if(isClicked==true && Input.GetKeyDown(KeyCode.Return)){
+			book.AddBook (-1);
 			ran = Random.Range (0f, 1f);
 			Debug.Log (ran);
 			if (ran < 0.33) {

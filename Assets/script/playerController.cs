@@ -1,12 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Fungus;
 
 public class playerController : MonoBehaviour {
     public Sprite faceR;
     public Sprite faceL;
     SpriteRenderer playerSpriteRenderer;
     public bookCount book;
+	public
     // Use this for initialization
     void Start () {
         playerSpriteRenderer = (SpriteRenderer)GetComponent("SpriteRenderer");
@@ -21,6 +23,7 @@ public class playerController : MonoBehaviour {
         {   
             //library
             this.transform.position = new Vector3(117, 0, 0);
+
         }
         else if (i == 3) {
             //home
